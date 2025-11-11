@@ -76,7 +76,7 @@ abstract class AbstractScalarParam extends AbstractParam
         // value of the map
         if ($this->map) {
             $constraints = [
-                new All(['constraints' => $constraints]),
+                new All($constraints),
             ];
             if (false === $this->nullable) {
                 $constraints[] = new NotNull();
